@@ -1,0 +1,45 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run test file",
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ],
+      "program": "${file}",
+      "runtimeArgs": [
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand",
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "dev",
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ],
+      "program": "${workspaceFolder}/src/index.ts",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.vscode/.env",
+      "runtimeExecutable": "node",
+      "env": {
+        "SWCRC": "true"
+      },
+      "runtimeArgs": [
+        "--nolazy",
+        "-r", "@swc-node/sourcemap-support",
+        "-r", "@swc-node/register",
+      ],
+    }
+  ]
+}
