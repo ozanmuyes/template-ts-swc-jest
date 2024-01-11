@@ -18,9 +18,10 @@ $ pnpm install
 
 You can, of course, use `npm` or `yarn` instead.
 
-Now you can run tests, build the application and depending on your editor / IDE you can debug the application (with some ceveats).
+Now you can run tests, build the application and depending on your editor / IDE you can debug the application.
 
 For example just run these;
+
 ```bash
 $ pnpm build
 $ node ./dist/index.js
@@ -30,11 +31,15 @@ to see the output;
 
 > Hello, world!
 
-DO NOT forget to delete the `dist` directory before debugging.
+DO NOT forget to delete the `dist` directory before debugging (see Remarks #1);
+
+```bash
+$ rm -rf ./dist
+```
 
 ## Remarks
 
-* Delete build directory (i.e. "dist") before debugging or running tests.
+1. Delete build directory (i.e. "dist") before debugging or running tests.
 
 ## Known Issues
 
@@ -44,5 +49,3 @@ DO NOT forget to delete the `dist` directory before debugging.
   > SUPPORTED TYPESCRIPT VERSIONS: >=3.3.1 <5.2.0
   >
   > YOUR TYPESCRIPT VERSION: 5.3.3
-* VSCode / VSCodium debugger WILL NOT stop at `debugger` statements
-* VSCode / VSCodium debugger will hit the correct breakpoint position on _compiled_ (JS) file. Which is not intended.

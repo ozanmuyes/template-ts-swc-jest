@@ -32,6 +32,9 @@
       "cwd": "${workspaceFolder}",
       "envFile": "${workspaceFolder}/.vscode/.env",
       "runtimeExecutable": "node",
+      "env": {
+        "SWCRC": "1"
+      },
       "runtimeArgs": [
         "--nolazy",
         "-r", "@swc-node/sourcemap-support",
