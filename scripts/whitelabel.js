@@ -32,6 +32,11 @@ program
 const config = program.opts();
 
 (() => {
+  fs.copyFileSync(
+    path.join(ROOT_DIR, "package.json"),
+    path.join(ROOT_DIR, "package.json_backup"),
+  );
+
   const p2 = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, "package.json")));
 
   p2.name = config.name;
@@ -63,7 +68,7 @@ const config = program.opts();
   }
 
   fs.writeFileSync(
-    path.join(ROOT_DIR, "package2.json"),
+    path.join(ROOT_DIR, "package.json"),
     JSON.stringify(p2, null, 2),
   );
 })();
