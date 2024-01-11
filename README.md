@@ -20,7 +20,13 @@ You can, of course, use `npm` or `yarn` instead.
 
 Now you can run tests, build the application and depending on your editor / IDE you can debug the application.
 
-For example just run these;
+To run the test file run;
+
+```bash
+$ pnpm test
+```
+
+To build and run the application run these;
 
 ```bash
 $ pnpm build
@@ -36,6 +42,16 @@ DO NOT forget to delete the `dist` directory before debugging (see Remarks #1);
 ```bash
 $ rm -rf ./dist
 ```
+
+Read on if you are using VSCode / VSCodium as your IDE;
+
+```bash
+$ code .
+```
+
+open `src/index.ts` and put a breakpoint on line 3. Then open the Debug Panel (Cmd+Shift+D on macOS, Ctrl+Shift+D on Windows), select "dev" launch setting, and start debugging (F5).
+
+Rest is in your hands. It's up to you what you'll build...
 
 ## Remarks
 
