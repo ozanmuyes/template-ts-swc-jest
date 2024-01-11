@@ -1,6 +1,6 @@
 {
-  // NOTE https://github.com/tsconfig/bases#node-16-tsconfigjson
-  "extends": "@tsconfig/node16/tsconfig.json",
+  // NOTE https://github.com/tsconfig/bases?tab=readme-ov-file#node-20-tsconfigjson
+  "extends": "@tsconfig/node20/tsconfig.json",
 
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts"],

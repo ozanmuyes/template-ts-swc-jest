@@ -7,14 +7,7 @@ module.exports = {
     "**/?(*.)+(spec|test).+(ts|tsx|js)",
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": [
-      "@swc-node/jest",
-
-      // configuration
-      {
-        sourcemap: "inline"
-      },
-    ],
+    "^.+\\.(ts|tsx)$": "@swc/jest",
   },
   coverageThreshold: {
     global: {

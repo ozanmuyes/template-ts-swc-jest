@@ -11,3 +11,12 @@ environment variables set, see ".vscode/.env" file.
 ## Remarks
 
 * Delete build directory (i.e. "dist") before debugging or running tests.
+
+## Known Issues
+
+* Currently cannot run "lint" script due to;
+  > WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+  >
+  > SUPPORTED TYPESCRIPT VERSIONS: >=3.3.1 <5.2.0
+  >
+  > YOUR TYPESCRIPT VERSION: 5.3.3

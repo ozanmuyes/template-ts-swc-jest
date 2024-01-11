@@ -3,11 +3,7 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: [
-    "@typescript-eslint",
-    "eslint-plugin-prettier",
-    "jest",
-  ],
+  plugins: ["@typescript-eslint", "eslint-plugin-prettier", "jest"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -19,13 +15,20 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "no-param-reassign": "error",
   },
-  // overrides: [
-  //   {
-  //     files: ["test/**/*.ts", "**/?(*.)+(spec|test).+(ts|tsx|js)"],
-  //     rules: {
-  //       // "no-param-reassign": "off",
-  //     },
-  //   },
-  //   //
-  // ],
+  overrides: [
+    // {
+    //   files: ["test/**/*.ts", "**/?(*.)+(spec|test).+(ts|tsx|js)"],
+    //   rules: {
+    //     // "no-param-reassign": "off",
+    //   },
+    // },
+    {
+      files: ["*.js"],
+      rules: {
+        "no-undef": "off",
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+    //
+  ],
 };

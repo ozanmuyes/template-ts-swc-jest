@@ -33,12 +33,32 @@
       "envFile": "${workspaceFolder}/.vscode/.env",
       "runtimeExecutable": "node",
       "env": {
-        "SWCRC": "true"
+        "SWCRC": "1"
       },
       "runtimeArgs": [
         "--nolazy",
         "-r", "@swc-node/sourcemap-support",
         "-r", "@swc-node/register",
+      ],
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "dev_script-whitelabel",
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**",
+      ],
+      "program": "${workspaceFolder}/scripts/whitelabel.js",
+      // "args": ["-n", "ex_pname_1", "--name", "ex_pname_2", "--name=pname"],
+      "args": [
+        "-n", "NEW_NAME",
+        "--version", "1.0.42",
+        "--description", "some desc here",
+        "-k", "kw1,kw2",
+        "-l", "GPL",
+        "-h", "google.com"
       ],
     }
   ]
