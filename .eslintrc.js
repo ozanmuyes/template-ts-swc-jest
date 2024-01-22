@@ -29,6 +29,13 @@ module.exports = {
         "@typescript-eslint/no-var-requires": "off",
       },
     },
+    {
+      files: ["*.test.ts", "*.spec.ts"],
+      rules: {
+        "jest/no-conditional-expect": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+      },
+    },
     //
   ],
 };
