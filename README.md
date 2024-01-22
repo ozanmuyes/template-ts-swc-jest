@@ -6,7 +6,7 @@ Although the repo has "pnpm-lock.yaml" you can use `npm` or `yarn` to install
 dependencies; just be sure **correct version of dependencies** were installed (you can manually cross-check against "pnpm-lock.yaml").
 
 The repo has VSCode support; among other things you can start debugging with
-environment variables set, see [".vscode/.env.example"](./.vscode/.env.example) file.
+environment variables set, see "dev" launch configuration's `"env"` field.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ You can clone this (template) repository (_discouraged_) or click the "Use Templ
 
 Just DO NOT forget to change the origin to suit your needs - so that you won't develop this (template) repository but instead your copy of this (template) repository.
 
-<!-- TODO degit -->
+<!-- TODO degit ozanmuyes/template-ts-swc-jest & git init -->
 
 <!-- TODO stackblitz -->
 
@@ -73,6 +73,8 @@ Rest is in your hands; to implement, to develop. It's up to you what you'll buil
 Finally don't forget to change this README.
 
 Thanks. Please don't forget to Star this repository if you find it useful.
+
+## TODO Talk about whitelabeling (FIXME BU DEĞİŞİKLİK main BRANC'TE DE OLSUN)
 
 ## Remarks
 
